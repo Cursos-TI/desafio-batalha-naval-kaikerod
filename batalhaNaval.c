@@ -45,7 +45,6 @@ int main() {
  
     if ((navio2_linha + TAMANHO_NAVIO) <= TAMANHO_TABULEIRO) {
 
-s.
         for (int i = 0; i < TAMANHO_NAVIO; i++) {
             if (tabuleiro[navio2_linha + i][navio2_coluna] == NAVIO) {
                 sobreposicao = true;
