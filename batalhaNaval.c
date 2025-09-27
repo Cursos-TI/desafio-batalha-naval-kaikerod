@@ -60,6 +60,26 @@ int main() {
         }
     }
 
+    int inicio_diag_principal = 1;
+    for (int i = 0; i < TAMANHO_NAVIO; i++) {
+        int pos = inicio_diag_principal + i;
+        // Verifica se a posição está dentro do tabuleiro
+        if (pos < TAMANHO_TABULEIRO) {
+            tabuleiro[pos][pos] = NAVIO;
+        }
+    }
+
+    int inicio_linha_sec = 0;
+    for (int i = 0; i < TAMANHO_NAVIO; i++) {
+        int linha = inicio_linha_sec + i;
+
+        int coluna = (TAMANHO_TABULEIRO - 1) - linha;
+        
+        if (linha < TAMANHO_TABULEIRO && coluna >= 0) {
+            tabuleiro[linha][coluna] = NAVIO;
+        }
+    }
+
 
     
     printf("Tabuleiro do Batalha Naval:\n");
